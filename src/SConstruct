@@ -1,0 +1,22 @@
+env = Environment(CCFLAGS=['-O2' , '-fPIC' , '-c'])
+env.Append(LIBS = ['SDL' , 'SDL_mixer' , 'SDL_image' ])
+
+sources = ["list.c",
+"pair_list.c",
+"text_list.c",
+"init.c",
+"load.c",
+"keyboard.c",
+"collision.c",
+"physics.c",
+"audio.c",
+"animation.c",
+"drawing.c",
+"sprite.c"]
+
+mgean = env.SharedLibrary(target = "MG", source = sources)
+env.Install( "/usr/lib" , mgean )
+env.Alias('install', ['/usr/lib'])
+
+
+

@@ -1,0 +1,9 @@
+0. Dependencies
+	libsdl-image1.2-dev libsdl-mixer1.2-dev libsdl1.2-dev
+1. Building
+	enter src/ directory
+	type "scons"
+3. Installing
+	type "sudo scons install" in src/
+4. Cleaning
+	type "scons -c" or "sudo scons -c install" when installed
